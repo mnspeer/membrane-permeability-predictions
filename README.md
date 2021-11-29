@@ -5,7 +5,7 @@ BILLY FILL OUT --> quick intro to research.
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Application](#application}
+* [Application](#application)
 * [Code structure](#code-structure)
 
 ## General info
