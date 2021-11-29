@@ -13,11 +13,8 @@ quick info about model. --> MELISSA FILL (BILLY?)
 	
 ## Technologies
 Project is created with:
-* Python version: 3.6 (for ipynb)
-* Python version: 3.8 (for py)
-* modAL version: 0.4.1
+* Python version: 3.6
 * scikit-learn version: 0.22.2
-* lightgbm version: 2.2.3
 
 	
 ## Setup
