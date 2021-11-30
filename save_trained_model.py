@@ -31,8 +31,6 @@ def readFile():
 
 def RandomForestTraining(df, labels):
     regr = RandomForestRegressor(max_depth=17, random_state=0)
-    #sfm = SelectFromModel(regr, threshold=-np.inf, max_features=10)
-    #dfSel= sfm.fit_transform(df, labels)
     regr.fit(df, labels)
     dump(regr, 'Set1_Set2_Set3_trained_model_3D_v4_new.joblib')
 
