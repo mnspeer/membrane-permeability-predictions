@@ -37,18 +37,18 @@ Example: py rf_classifier_load.py Set1_Set2_Set3_SMILE_3D.csv
 When you are using your own pre-trained model, the saved model file is provided as a second command line argument.
 Example: py rf_classifier_load.py *datafile* *modelfile*
 
-Ensure, that the following fields are included in your data file: 
+Ensure, that the following fields are included in your data file:
 1. title =
 2. ALOGP =
 3. T(N..O) =
-4. T(N..N) =
-5. piPC10 =
-6. piPC04 =
-7. piPC02 =
-8. nHDon =
-9. PSA_w =
-10. Es_w =
-11. |dEs| =
+4. nHDon = 
+5. T(N..N) =
+6. piPC10 =
+7. piPC04 =
+8. piPC02 =
+9. MAXDN =
+10. PSA_w =
+11. Es_w =
 
 If any field has a different name in your input file than defined above, this can be adjusted following the prompts in the code.
 

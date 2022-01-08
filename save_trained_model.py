@@ -25,7 +25,7 @@ def readFile():
     #df = df[['ALOGP', 'T(N..O)','|dEs|', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w']]
     # 'TPSA(Tot)'
 
-    df = df[['ALOGP', 'T(N..O)','T(N..N)','piPC10', 'piPC04','piPC02', 'nHDon','PSA_w','Es_w', '|dEs|']]
+    df = df[['ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w']]
 
     return df, labels
 

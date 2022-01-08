@@ -13,7 +13,7 @@ def readFile():
     check = input("Do any parameters have different names as per readme file? (y/n)")
 
     # initial naming of columns as per our names in paper.
-    columns = ['title', 'ALOGP', 'T(N..O)','T(N..N)','piPC10', 'piPC04','piPC02', 'nHDon','PSA_w','Es_w', '|dEs|']
+    columns = ['title','ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w']
 
     # prompt in case names of columns differ to names presented in paper.
     if check == "y":
@@ -54,7 +54,7 @@ def RandomForestPredictor(df, cols):
         for item in testPred:
             f.write("%s\n" % item)
 
-    results = pd.read_csv('results/predictions.csv', header=None, names=['LN_PERM_prediction'])
+    results = pd.read_csv('results/predictions.csv', header=None, names=['ln_Pe_prediction'])
     print(results)
     output = pd.concat([title,df,results], axis=1)
     output.to_csv('results/predictions_data.csv')
