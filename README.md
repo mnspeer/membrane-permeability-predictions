@@ -31,7 +31,7 @@ Example: py rf_classifier_load.py *datafile* *modelfile*
 
 Ensure, that the following fields are included in your data file: 
 1. title =
-2. MLOGP =
+2. ALOGP =
 3. T(N..O) =
 4. T(N..N) =
 5. piPC10 =

@@ -13,7 +13,7 @@ def readFile():
     check = input("Do any parameters have different names as per readme file? (y/n)")
 
     # initial naming of columns as per our names in paper.
-    columns = ['title', 'MLOGP', 'T(N..O)','T(N..N)','piPC10', 'piPC04','piPC02', 'nHDon','PSA_w','Es_w', '|dEs|']
+    columns = ['title', 'ALOGP', 'T(N..O)','T(N..N)','piPC10', 'piPC04','piPC02', 'nHDon','PSA_w','Es_w', '|dEs|']
 
     # prompt in case names of columns differ to names presented in paper.
     if check == "y":
