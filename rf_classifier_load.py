@@ -38,7 +38,7 @@ def readFile():
     return df, columns
 
 def RandomForestPredictor(df, cols):
-    print(len(sys.argv))
+    #print(len(sys.argv))
     if len(sys.argv) > 2:
         fmodel = sys.argv[-2] # useful if user is using their own model.
     else:
