@@ -38,17 +38,17 @@ When you are using your own pre-trained model, the saved model file is provided 
 Example: python rf_classifier_load.py *datafile* *modelfile*
 
 Ensure, that the following fields are included in your data file:
-1. title =
-2. ALOGP =
-3. T(N..O) =
-4. nHDon = 
-5. T(N..N) =
-6. piPC10 =
-7. piPC04 =
-8. piPC02 =
-9. MAXDN =
-10. PSA_w =
-11. Es_w =
+1. title = molecule index number in dataset, starting at 1
+2. ALOGP = octanol-water partitioning co-efficient (from SMILES)
+3. T(N..O) = sum of topological distances between N and O (from SMILES)
+4. nHDon = number of hyrogen bond doners (from SMILES)
+5. T(N..N) = sum of topological distances between N and N (from SMILES)
+6. piPC10 = multiple molecular path count of order 10 (from SMILES)
+7. piPC04 = multiple molecular path count of order 4 (from SMILES)
+8. piPC02 = multiple molecular path count of order 2 (from SMILES)
+9. MAXDN = maximum electrotopological negative variation (from SMILES)
+10. PSA_w = polar surface area in water (Angtroms^2) (from 3D modelling)
+11. Es_w = solvation energy in water (kCal mol^-1) (from 3D modelling)
 
 If any field has a different name in your input file than defined above, this can be adjusted following the prompts in the code.
 
