@@ -12,7 +12,9 @@ used in the RF regression tool, so as to model the thermodynamic entropy and ent
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Application](#application)
-* [Code structure](#code-structure)
+	* [Using a pre-trained model](#using-a-pre-trained-model)
+	* [Training the model on a new dataset](#training-the-model-on-a-new-dataset)
+* [Additional programs used in research study](#additional-programs-used-in-research-study)
 
 ## General info
 quick info about model. --> MELISSA FILL (BILLY?)
@@ -28,14 +30,24 @@ Project is created with:
 ## Application
 Please note that pandas and sklearn are dependencies for this code.
 
+### Using a pre-trained model
+
 When running our pre-trained code (trained on Set1 + Set2 + Set3), use the *rf_classifier_load.py* program.
 Input the name of the raw data file used as a command line argument, when running the code.
 
-py rf_classifier_load.py *datafile*
-Example: python rf_classifier_load.py Set1_Set2_Set3_SMILE_3D.csv
+~~~
+python rf_classifier_load.py *datafile*
+~~~
+Example:
+~~~
+python rf_classifier_load.py Set1_Set2_Set3_SMILE_3D.csv
+~~~
 
 When you are using your own pre-trained model, the saved model file is provided as a second command line argument.
-Example: python rf_classifier_load.py *datafile* *modelfile*
+Example:
+~~~
+python rf_classifier_load.py *datafile* *modelfile*
+~~~
 
 Ensure, that the following fields are included in your data file:
 1. title = molecule index number in dataset, starting at 1
@@ -52,12 +64,26 @@ Ensure, that the following fields are included in your data file:
 
 If any field has a different name in your input file than defined above, this can be adjusted following the prompts in the code.
 
-## Training model on new dataset
+### Training the model on a new dataset
 Instead of using our pre-trained model, a new model can be trained from scratch on any dataset, which contains the ten defined parameters (as per Section Application).
 To train a new model, the *save_trained_model.py* file is used. The model is trained on the datset provided as a command line argument, then dumped into a file and can be subsequently used as *modelfile* for the *rf_classifier_load.py* program.
-Example: to train the model on the provided *Set1_Set2_Set3_SMILE_3D.csv* file, the command is: python save_trained_model.py Set1_Set2_Set3_SMILE_3D.csv
-The file will then be called by default *trained_model.joblib*. If you want a custom name for the file instead, define it via the command line, as follows: python python save_trained_model.py *custom_name* Set1_Set2_Set3_SMILE_3D.csv.
+
+Example:
+to train the model on the provided *Set1_Set2_Set3_SMILE_3D.csv* dataset, the command is:
+~~~
+python save_trained_model.py Set1_Set2_Set3_SMILE_3D.csv
+~~~
+
+The file will then by default be called *trained_model.joblib*. If you want a custom name for the file instead, define it via the command line, as follows:
+~~~
+python save_trained_model.py *custom_name* Set1_Set2_Set3_SMILE_3D.csv.
+~~~
 Now the filename will be *custom_name*.joblib instead of *trained_model*.joblib
+
+The general command is:
+~~~
+python save_trained_model.py *custom_name* *dataset*
+~~~
 
 ## Additional programs used in research study
 The following outline of files was used for our model development and analysis.
