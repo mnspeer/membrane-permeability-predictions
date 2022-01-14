@@ -24,14 +24,14 @@ Project is created with:
 
 ## Installation
 	
-XXX Installation  -how to download and install >
+XXX Installation  -how to download and install XXX
 
 ## Application
-Please note that pandas  and sklearn are dependencies for this code.
+Please note that pandas and sklearn are dependencies for this code.
 
-### Using a pre-trained model
+### Using the pre-trained model
 
-When running our pre-trained code (trained on Set1 + Set2 + Set3), use the *rf_classifier_load.py* program.
+To run the code using our pre-trained code (trained on Set1 + Set2 + Set3), use the *rf_classifier_load.py* program.
 Input the name of the raw data file used as a command line argument, when running the code.
 
 ~~~
@@ -42,13 +42,14 @@ Example:
 python rf_classifier_load.py Set1_Set2_Set3_SMILE_3D.csv
 ~~~
 
-When you are using your own pre-trained model, the saved model file is provided as a second command line argument.
+To use your own pre-trained model, provide the saved model file as a second command line argument.
+~~~
 Example:
 ~~~
 python rf_classifier_load.py *datafile* *modelfile*
 ~~~
 
-Ensure, that the following fields are included in your data file:
+Ensure that the following fields are present in your data file:
 1. title = molecule index number in dataset, starting at 1
 2. ALOGP = octanol-water partitioning co-efficient (from SMILES)
 3. T(N..O) = sum of topological distances between N and O (from SMILES)
