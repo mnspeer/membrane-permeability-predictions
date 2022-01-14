@@ -32,7 +32,7 @@ Please note that pandas and sklearn are dependencies for this code.
 ### Using the pre-trained model
 
 To run the code using our pre-trained code (trained on Set1 + Set2 + Set3), use the *rf_classifier_load.py* program.
-Input the name of the raw data file used as a command line argument, when running the code.
+Include the raw data file as a command line argument.
 
 ~~~
 python rf_classifier_load.py *datafile*
