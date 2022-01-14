@@ -5,12 +5,11 @@ cell-membrane impermable and do reach intracellular drug targets. Models that ca
 Here we present the code for a random forest regression model that aims to predict the membrane permeation rates of large, flexible macrocycles that lie outside of Rule of 5 chemical space. Biophysically meaningful chemical properties (features)
 used in the RF regression tool, so as to model the thermodynamic entropy and enthalpy of membrane permeation.
 
-The model uses Python to implement a random forest regression model using chemical features which can be calculated using <XXXX>.
+The model uses Python to implement a random forest regression model using chemical features which can be calculated using XXXX.
 
 ## Table of contents
-* [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Installation](#installation)
 * [Application](#application)
 	* [Using a pre-trained model](#using-a-pre-trained-model)
 	* [Training the model on a new dataset](#training-the-model-on-a-new-dataset)
@@ -20,15 +19,15 @@ The model uses Python to implement a random forest regression model using chemic
 ## Technologies
 Project is created with:
 * Python version: 3.6
-* scikit-learn version: 0.22.2
+* scikit-learn version: 0.22.2 (https://scikit-learn.org/) 
+* Python for data analysis (https://pandas.pydata.org/)
 
+## Installation
 	
-## Setup
-	
-<Installation  -how to download install - >
+XXX Installation  -how to download and install >
 
 ## Application
-Please note that pandas (https://pandas.pydata.org/) and sklearn (https://scikit-learn.org/) are dependencies for this code.
+Please note that pandas  and sklearn are dependencies for this code.
 
 ### Using a pre-trained model
 
