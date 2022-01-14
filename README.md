@@ -17,7 +17,7 @@ The model uses Python to implement a random forest regression model using chemic
 
 
 ## Technologies
-Project is created with:
+This project is created with:
 * Python version: 3.6
 * scikit-learn version: 0.22.2 (https://scikit-learn.org/) 
 * Python for data analysis (https://pandas.pydata.org/)
