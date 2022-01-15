@@ -17,17 +17,26 @@ The model uses Python to implement a random forest regression model using chemic
 
 
 ## Technologies
-This project is created with:
+This project was created with:
 * Python version: 3.6
 * scikit-learn version: 0.22.2 (https://scikit-learn.org/) 
 * Python for data analysis (https://pandas.pydata.org/)
 
 ## Installation
+
+Download our code from Gituhub
+
+Pandas and sklearn are dependencies for this code. These can be installed in several different ways - one option is using pip.
+
+~~~
+python3 -m pip install pandas
+python3 -m pip install scikit-learn
+~~~
 	
-XXX Installation  -how to download and install XXX
+
 
 ## Application
-Please note that pandas and sklearn are dependencies for this code.
+
 
 ### Using the pre-trained model
 
