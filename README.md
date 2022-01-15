@@ -26,7 +26,9 @@ This project was created with:
 
 Download our code from Gituhub
 
-Pandas and sklearn are dependencies for this code. These can be installed in several different ways - one option is using pip.
+The code requires Python 3 - you may need the *python3* command to execute this.
+
+Pandas and sklearn are dependencies of this code. These can be installed in several ways - one option is using pip.
 
 ~~~
 python3 -m pip install pandas
@@ -37,10 +39,9 @@ python3 -m pip install scikit-learn
 
 ## Application
 
-
 ### Using the pre-trained model
 
-To run the code using our pre-trained code (trained on Set1 + Set2 + Set3), use the *rf_classifier_load.py* program.
+To use our pre-trained code (trained on Set1 + Set2 + Set3), use *rf_classifier_load.py*.
 Include the raw data file as a command line argument.
 
 ~~~
