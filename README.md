@@ -24,7 +24,7 @@ This project was created with:
 
 ## Installation
 
-Download our code from Gituhub
+Download our code from Gituhub put it in a convenient location.
 
 The code requires Python 3 - you may need the *python3* command to execute this.
 
