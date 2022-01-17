@@ -60,6 +60,7 @@ def RandomForestPredictor(df, cols):
     output = pd.concat([title,df,results], axis=1)
     output.to_csv('results/predictions_data.csv', index=False)
     os.remove('results/predictions.csv')
+    os.remove('results/data_features_extracted.csv')
     print('\nAll predictions are completed. Please access the results directory to view the predictions.')
 
 
