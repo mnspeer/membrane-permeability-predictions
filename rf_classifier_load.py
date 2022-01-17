@@ -1,4 +1,5 @@
 import sys
+import os
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from joblib import load
@@ -22,18 +23,19 @@ def readFile():
     
     # prompt to adjust column names that differ from default names used in paper.
     if manInput == True:
-        print(columns)
+        #print(columns)
         for index, column in enumerate(columns):
             field = input(column+":")
             if not field == "":
                 columns[index] = field
     
-    print("The defined column names are set to the following:")
+    print("\nThe defined column names are set to the following:")
     print(columns)
 
     df = df[columns]
 
-    df.to_csv("data_features_extracted.csv")
+    Path('results/').mkdir(parents=True, exist_ok=True)
+    df.to_csv("results/data_features_extracted.csv", index=False)
 
     return df, columns
 
@@ -49,15 +51,17 @@ def RandomForestPredictor(df, cols):
     df.drop(columns=cols[0], axis=1, inplace=True)
     testPred = regr.predict(df)
 
-    Path('results/').mkdir(parents=True, exist_ok=True)
+    
     with open('results/predictions.csv', 'w') as f:
         for item in testPred:
             f.write("%s\n" % item)
 
     results = pd.read_csv('results/predictions.csv', header=None, names=['ln_Pe_prediction'])
-    print(results)
     output = pd.concat([title,df,results], axis=1)
-    output.to_csv('results/predictions_data.csv')
+    output.to_csv('results/predictions_data.csv', index=False)
+    os.remove('results/predictions.csv')
+    print('\nAll predictions are completed. Please access the results directory to view the predictions.')
+
 
 if __name__ == "__main__":
 
