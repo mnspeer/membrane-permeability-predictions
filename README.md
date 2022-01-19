@@ -73,7 +73,7 @@ python rf_classifier_load.py *datafile* *modelfile*
 ~~~
 
 ### Training the model on a new dataset
-Instead of using our pre-trained model, a new model can be trained from scratch on any dataset, which contains the ten defined model parameters.
+Instead of using our pre-trained model, a new model can be trained from scratch using any dataset that contains the ten defined model parameters.
 
 Ensure that the following fields are present in your data file:
 1. title = molecule index number in dataset, starting at 1
@@ -90,7 +90,7 @@ Ensure that the following fields are present in your data file:
 
 If any field has a different name in your input file than defined above, this can be adjusted following the prompts in the code.
 
-To train the program *save_trained_model.py* which creates a new *modelfile* for the *rf_classifier_load.py* program.
+To train the model use *save_trained_model.py*, which creates a new *modelfile* for the *rf_classifier_load.py* program.
 
 The general command is:
 ~~~
