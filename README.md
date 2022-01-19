@@ -2,25 +2,34 @@
 Macrocycles are attractive scaffolds for drug design, as they are large enough to disrupt protein-protein interactions with high potencies. However, due to their size and often their polarity, macrocycles usually have poor oral bioavailability. Specifically, they are often (but not always)
 cell-membrane impermable and do not reach intracellular drug targets. Models that can acurately predict membrane permeability have great potential to assist the design of potent, membrane permeable macrocyclic compounds as biological tools and new drugs.
 
-Here we present the code for a random forest regression model that aims to predict the membrane permeation rates of large, flexible macrocycles that lie outside of Rule of 5 chemical space. Biophysically meaningful chemical properties (features)
+Here we present the code for a random forest regression model that aims to predict the membrane permeation rates of large, flexible macrocycles that lie outside of Rule of 5 chemical space. Biophysically meaningful chemical descriptors (features).
 used in the RF regression tool, so as to model the thermodynamic entropy and enthalpy of membrane permeation.
 
-The model uses Python to implement a random forest regression model using chemical features which can be calculated using XXXX.
+The model uses Python to implement a random forest regression model using chemical descriptors calculated using Dragon and Maestro.
 
 ## Table of contents
 * [Technologies](#technologies)
+* [Files](#files)
 * [Installation](#installation)
 * [Application](#application)
 	* [Using a pre-trained model](#using-a-pre-trained-model)
 	* [Training the model on a new dataset](#training-the-model-on-a-new-dataset)
 * [Additional programs used in research study](#additional-programs-used-in-research-study)
 
+## Files
+
+Set1_Set2_Set3_SMILE_3D.csv - Input data for compounds in Sets 1-3 calculated using Dragon and Maestro.
+Set1_Set2_Set3_trained_model_3D_nHDon_new.joblib - Saved model calculated using Sets 1-3.
+rf_classifier_load.py - Python program to calculate permeabilities of peptides using random forest models.
+save_trained_model.py - Python program to XXXX
 
 ## Technologies
 This project was created with:
-* Python version: 3.6
-* scikit-learn version: 0.22.2 (https://scikit-learn.org/) 
+* Python version: 3.6 (https://www.python.org/)
+* Scikit-learn version: 0.22.2 (https://scikit-learn.org/) 
 * Python for data analysis (https://pandas.pydata.org/)
+* Dragon (https://chm.kode-solutions.net/pf/dragon-7-0/)
+* Maestro (https://www.schrodinger.com/products/maestro)
 
 ## Installation
 
