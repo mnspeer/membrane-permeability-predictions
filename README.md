@@ -50,12 +50,15 @@ python3 -m pip install scikit-learn
 
 ### Using pre-trained models
 
-To use our pre-trained code (trained on Set1 + Set2 + Set3), use *rf_classifier_load.py*.
-Include the raw data file as a command line argument.
+Pretrained models are run with *rf_classifier_load.py*
+
+Syntax:
 
 ~~~
-python rf_classifier_load.py *datafile*
+python rf_classifier_load.py *datafile* *modelfile*
 ~~~
+
+To use our pre-trained model (Set1_Set2_Set3_trained_model_3D_nHDon_new.joblib, which istrained on Set1 + Set2 + Set3) only the raw data file is required as a command line argument.
 
 Example:
 
