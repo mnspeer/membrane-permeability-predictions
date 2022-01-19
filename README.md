@@ -65,8 +65,6 @@ python rf_classifier_load.py Set1_Set2_Set3_SMILE_3D.csv
 
 To use your own pre-trained model, provide the saved model file as a second command line argument.
 
-Example:
-
 ~~~
 python rf_classifier_load.py *datafile* *modelfile*
 ~~~
