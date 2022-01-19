@@ -100,7 +100,8 @@ python save_trained_model.py *custom_name* *dataset*
 ~~~
 
 Examples:
-to train the model on the provided *Set1_Set2_Set3_SMILE_3D.csv* dataset, the command is:
+
+To train the model on the provided *Set1_Set2_Set3_SMILE_3D.csv* dataset, the command is:
 ~~~
 python save_trained_model.py Set1_Set2_Set3_SMILE_3D.csv
 ~~~
