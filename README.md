@@ -86,9 +86,6 @@ python rf_classifier_load.py Set1_Set2_Set3_SMILE_3D.csv
 
 To use your own pre-trained model, provide the saved model file as a second command line argument.
 
-~~~
-python rf_classifier_load.py *datafile* *modelfile*
-~~~
 
 ### Training the model on a new dataset
 Instead of using our pre-trained model, a new model can be trained from scratch using any dataset that contains the ten defined model parameters.
