@@ -76,7 +76,7 @@ Syntax:
 python rf_classifier_load.py *datafile* *modelfile*
 ~~~
 
-To use our pre-trained model (Set1_Set2_Set3_trained_model_3D_nHDon_new.joblib, which istrained on Set1 + Set2 + Set3) only the raw data file is required as a command line argument.
+To use our pre-trained model (Set1_Set2_Set3_trained_model_3D_nHDon_new.joblib, which is trained on Set1 + Set2 + Set3) only the raw data file is required as a command line argument.
 
 Example:
 
