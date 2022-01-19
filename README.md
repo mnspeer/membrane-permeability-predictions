@@ -50,7 +50,7 @@ python3 -m pip install scikit-learn
 
 ### Using pre-trained models
 
-Pretrained models are run with *rf_classifier_load.py*
+Pretrained models are run with *rf_classifier_load.py*.
 
 Syntax:
 
