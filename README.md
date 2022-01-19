@@ -108,9 +108,9 @@ python save_trained_model.py Set1_Set2_Set3_SMILE_3D.csv
 The output modelfile will be called *trained_model.joblib* by default. If you want a custom name for the file instead, define it as follows:
 
 ~~~
-python save_trained_model.py custom_name Set1_Set2_Set3_SMILE_3D.csv.
+python save_trained_model.py custom_name Set1_Set2_Set3_SMILE_3D.csv
 ~~~
-Now the model filename will be *custom_name*.joblib.
+Now the model filename will be *custom_name.joblib*.
 
 
 
