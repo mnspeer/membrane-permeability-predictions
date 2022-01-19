@@ -11,10 +11,19 @@ def readFile():
     fpath = sys.argv[-1]
     df = pd.read_csv(fpath)
     manInput = False
-    check = input("Do any parameters have different names as per readme file? (y/n)")
 
-    # initial naming of columns as per our names in paper.
-    columns = ['title','ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w']
+    check_ground_truth = input("Do you have experimental ln_Pe included in your dataset? (y/n)")
+
+    if check_ground_truth == "y":
+        # initial naming of columns as per our names in paper including experimental ln_papp.
+        columns = ['title','ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w', 'ln_Pe',]
+    else:
+        # initial naming of columns as per our names in paper.
+        columns = ['title','ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w']
+
+    check = input("Do any parameters have different names as per readme file? (y/n)")
+  
+    #columns = ['title','ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w']
 
     # prompt in case names of columns differ to names presented in paper.
     if check == "y":
@@ -32,6 +41,7 @@ def readFile():
     print("\nThe defined column names are set to the following:")
     print(columns)
 
+
     df = df[columns]
 
     Path('results/').mkdir(parents=True, exist_ok=True)
@@ -46,9 +56,14 @@ def RandomForestPredictor(df, cols):
     else:
         # to load our best performing model, as per paper.
         fmodel = 'Set1_Set2_Set3_trained_model_3D_nHDon_new.joblib'
+
+    df_cpy = df.copy()
+
     regr = load(fmodel)
-    title = df[cols[0]]
-    df.drop(columns=cols[0], axis=1, inplace=True)
+    if len(cols) == 11:
+        df.drop(columns=cols[0], axis=1, inplace=True)
+    else:
+        df.drop(columns=[cols[0],cols[10]], axis=1, inplace=True)
     testPred = regr.predict(df)
 
     
@@ -57,7 +72,7 @@ def RandomForestPredictor(df, cols):
             f.write("%s\n" % item)
 
     results = pd.read_csv('results/predictions.csv', header=None, names=['ln_Pe_prediction'])
-    output = pd.concat([title,df,results], axis=1)
+    output = pd.concat([df_cpy,results], axis=1)
     output.to_csv('results/predictions_data.csv', index=False)
     os.remove('results/predictions.csv')
     os.remove('results/data_features_extracted.csv')
