@@ -48,6 +48,24 @@ python3 -m pip install scikit-learn
 
 ## Application
 
+### The data file
+
+Ensure that the following fields are present in your data files:
+
+1. title = molecule index number in dataset, starting at 1
+2. ALOGP = octanol-water partitioning co-efficient (from SMILES)
+3. T(N..O) = sum of topological distances between N and O (from SMILES)
+4. nHDon = number of hyrogen bond doners (from SMILES)
+5. T(N..N) = sum of topological distances between N and N (from SMILES)
+6. piPC10 = multiple molecular path count of order 10 (from SMILES)
+7. piPC04 = multiple molecular path count of order 4 (from SMILES)
+8. piPC02 = multiple molecular path count of order 2 (from SMILES)
+9. MAXDN = maximum electrotopological negative variation (from SMILES)
+10. PSA_w = polar surface area in water (Angtroms^2) (from 3D modelling)
+11. Es_w = solvation energy in water (kCal mol^-1) (from 3D modelling)
+
+If any field has a different name in your input file than defined above, this can be adjusted following the prompts in the code.
+
 ### Using pre-trained models
 
 Pretrained models are run with *rf_classifier_load.py*.
@@ -75,20 +93,7 @@ python rf_classifier_load.py *datafile* *modelfile*
 ### Training the model on a new dataset
 Instead of using our pre-trained model, a new model can be trained from scratch using any dataset that contains the ten defined model parameters.
 
-Ensure that the following fields are present in your data file:
-1. title = molecule index number in dataset, starting at 1
-2. ALOGP = octanol-water partitioning co-efficient (from SMILES)
-3. T(N..O) = sum of topological distances between N and O (from SMILES)
-4. nHDon = number of hyrogen bond doners (from SMILES)
-5. T(N..N) = sum of topological distances between N and N (from SMILES)
-6. piPC10 = multiple molecular path count of order 10 (from SMILES)
-7. piPC04 = multiple molecular path count of order 4 (from SMILES)
-8. piPC02 = multiple molecular path count of order 2 (from SMILES)
-9. MAXDN = maximum electrotopological negative variation (from SMILES)
-10. PSA_w = polar surface area in water (Angtroms^2) (from 3D modelling)
-11. Es_w = solvation energy in water (kCal mol^-1) (from 3D modelling)
 
-If any field has a different name in your input file than defined above, this can be adjusted following the prompts in the code.
 
 To train the model use *save_trained_model.py*, which creates a new *modelfile* for the *rf_classifier_load.py* program.
 
