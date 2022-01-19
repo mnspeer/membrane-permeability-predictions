@@ -8,8 +8,8 @@ used in the RF regression tool, so as to model the thermodynamic entropy and ent
 The model uses Python to implement a random forest regression model using chemical descriptors calculated using Dragon and Maestro.
 
 ## Table of contents
-* [Technologies](#technologies)
 * [Files](#files)
+* [Technologies](#technologies)
 * [Installation](#installation)
 * [Application](#application)
 	* [Using a pre-trained model](#using-a-pre-trained-model)
