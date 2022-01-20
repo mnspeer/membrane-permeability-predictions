@@ -27,7 +27,7 @@ from sklearn.preprocessing import Normalizer
 
 def initiateFeatures():
     # Set1_Set2_Set3_SMILE_noCorrel #Set1_Set2_Set3_SMILE_3D_noCorrel
-    df = pd.read_csv('Set1_Set2_Set3_SMILE_3D_noCorrel.csv')
+    df = pd.read_csv('../data/Set1_Set2_Set3_SMILE_3D_noCorrel.csv')
     labels = df['ln_Pe'].to_list()
     df.drop(df.columns[[0]], axis=1, inplace=True)
     df.drop(columns="ln_Pe", axis=1, inplace=True)
@@ -43,7 +43,7 @@ def initiateFeatures():
 
 def initiate():
     # Set1_Set2_Set3_SMILE_noCorrel #Set1_Set2_Set3_SMILE_3D_noCorrel_new
-    df = pd.read_csv('../Set1_Set2_Set3_SMILE_3D.csv')
+    df = pd.read_csv('../data/Set1_Set2_Set3_SMILE_3D.csv')
     labels = df['ln_Pe'].to_list()
     df.drop(df.columns[[0]], axis=1, inplace=True)
     df.drop(columns="ln_Pe", axis=1, inplace=True)

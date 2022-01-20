@@ -42,7 +42,7 @@ def correlation(dataset, threshold, target):
     return dataset
 
 if __name__ == "__main__":
-    dataset = pd.read_csv('../Set1_Set2_Set3_SMILE_3D.csv')
+    dataset = pd.read_csv('../data/Set1_Set2_Set3_SMILE_3D.csv')
     dataset.drop(dataset.columns[[0]], axis=1, inplace=True)
     print(dataset)
 
@@ -50,5 +50,5 @@ if __name__ == "__main__":
     dataset_noCorrel = correlation(dataset, 0.95, 'ln_Pe')    
     print(dataset_noCorrel)
     #dataset_noCorrel.corr().to_csv("Set3_SMILE_3D_correlation.csv")
-    dataset_noCorrel.to_csv('Set1_Set2_Set3_SMILE_3D_noCorrel.csv')
+    dataset_noCorrel.to_csv('../data/Set1_Set2_Set3_SMILE_3D_noCorrel.csv')
 

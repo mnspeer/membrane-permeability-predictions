@@ -55,7 +55,7 @@ def RandomForestPredictor(df, cols):
         fmodel = sys.argv[-2] # useful if user is using their own model.
     else:
         # to load our best performing model, as per paper.
-        fmodel = 'Set1_Set2_Set3_trained_model_3D_nHDon_new.joblib'
+        fmodel = 'data/Set1_Set2_Set3_trained_model_3D_nHDon_new.joblib'
 
     df_cpy = df.copy()
 

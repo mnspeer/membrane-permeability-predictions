@@ -23,7 +23,7 @@ def RandomForestTraining(df, labels):
         modelname = sys.argv[-2] # useful if user defines name of .joblib file
     else:
         # to use pre-defined "trained_model.joblib" as name.
-        modelname = 'trained_model'
+        modelname = 'data/trained_model'
     regr = RandomForestRegressor(max_depth=17, random_state=0)
     regr.fit(df, labels)
     modelname = modelname + '.joblib'
