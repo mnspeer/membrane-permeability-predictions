@@ -116,5 +116,11 @@ Now the model filename will be *custom_name.joblib*.
 
 
 ## Additional programs used in research study
-The following outline of files was used for our model development and analysis.
+The following outline of files was used for our model development and analysis, and can be found in the directory *programs_study*.
+
+1. *combine_sets.py* - To combine the individual datasets before training. We used an inner join, only keeping the features that were present in all datasets.
+2. *correl_rmv.py* - After all datasets are combined (if required), highly correlated features are removed from the dataset following the following rule: when |r| >= 0.95,
+then the features are marked as correlated. From all correlated groups, only the feature with the highest correlation with ln_Pe is kept, the rest are removed from the dataset.
+3. *training_CV_Set1_Set2_Set3.py* - This program concists of different methods, we used it for feature selection using RF feature importance, and for training and cross validation (CV).
+4. *training_CV_Set1_Set2_Set3_MLR.py* - Program used for training and CV using MLR instead of RF.
 
