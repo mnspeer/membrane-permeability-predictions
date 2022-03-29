@@ -10,11 +10,11 @@ def readFile():
     fpath = sys.argv[-1]
     df = pd.read_csv(fpath)
     #df = pd.read_csv('Membrane_Permeability_Study/Set1_Set2_Set3/Set1_Set2_Set3_SMILE_3D.csv')
-    labels = df['LN_PERM'].to_list()
+    labels = df['ln_Pe'].to_list()
     df.drop(df.columns[[0]], axis=1, inplace=True)
-    df.drop(columns="LN_PERM", axis=1, inplace=True)
+    df.drop(columns="ln_Pe", axis=1, inplace=True)
 
-    df = df[['ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w']]
+    df = df[['ALOGP', 'PSA_w', 'T(N..O)', 'nHDon', 'T(N..N)' , 'Es_w', 'piPC02']]
 
     return df, labels
 

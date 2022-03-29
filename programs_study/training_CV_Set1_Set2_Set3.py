@@ -280,11 +280,11 @@ def permutationImport(dfTrain, trainLabels):
 if __name__ == "__main__":
     
     # run RF regression with chosen features.
-    initiate()
+    #initiate()
 
     # run RF feature selection alhgorithm.
-    #dfTrain, trainLabels = initiateFeatures()
-    #RFfeatureImportance(dfTrain, trainLabels)
+    dfTrain, trainLabels = initiateFeatures()
+    RFfeatureImportance(dfTrain, trainLabels)
 
 
     # methods used for previous experiments.

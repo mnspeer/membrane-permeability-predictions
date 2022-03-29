@@ -16,10 +16,10 @@ def readFile():
 
     if check_ground_truth == "y":
         # initial naming of columns as per our names in paper including experimental ln_papp.
-        columns = ['title','ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w', 'ln_Pe',]
+        columns = ['title','ALOGP', 'PSA_w', 'T(N..O)', 'nHDon', 'T(N..N)' , 'Es_w', 'piPC02','ln_Pe']
     else:
         # initial naming of columns as per our names in paper.
-        columns = ['title','ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w']
+        columns = ['title','ALOGP', 'PSA_w', 'T(N..O)', 'nHDon', 'T(N..N)' , 'Es_w', 'piPC02',]
 
     check = input("Do any parameters have different names as per readme file? (y/n)")
   
@@ -55,12 +55,12 @@ def RandomForestPredictor(df, cols):
         fmodel = sys.argv[-2] # useful if user is using their own model.
     else:
         # to load our best performing model, as per paper.
-        fmodel = 'data/Set1_Set2_Set3_trained_model_3D_nHDon_new.joblib'
+        fmodel = 'data/trained_model_7features.joblib'
 
     df_cpy = df.copy()
 
     regr = load(fmodel)
-    if len(cols) == 11:
+    if len(cols) == 8:
         df.drop(columns=cols[0], axis=1, inplace=True)
     else:
         df.drop(columns=[cols[0],cols[10]], axis=1, inplace=True)
