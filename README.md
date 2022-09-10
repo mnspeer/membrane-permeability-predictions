@@ -1,8 +1,10 @@
 # membrane-permeability-predictions
-Macrocycles are attractive scaffolds for drug design, as they are large enough to disrupt protein-protein interactions with high potencies. However, due to their size and often their polarity, macrocycles usually have poor oral bioavailability. Specifically, they are often (but not always)
-cell-membrane impermeable and do not reach intracellular drug targets. Models that can acurately predict membrane permeability have great potential to assist the design of potent, membrane permeable macrocyclic compounds as biological tools and new drugs.
+Macrocycles are attractive scaffolds for drug design, as they are large enough to disrupt protein-protein interactions with high potencies.
+However, due to their size and often their polarity, macrocycles usually have poor oral bioavailability. Specifically, they are often (but not always) cell-membrane impermeable and do not reach intracellular drug targets.
+Models that can acurately predict membrane permeability have great potential to assist the design of potent, membrane permeable macrocyclic compounds as biological tools and new drugs.
 
-Here we present the code for a random forest regression model that aims to predict the membrane permeation rates of large, flexible macrocycles that lie outside of Rule of 5 chemical space. Biophysically meaningful chemical descriptors (features) are used in the RF regression tool, so as to model the thermodynamic entropy and enthalpy contributions to the free energy of membrane permeation.
+Here we present the code for a random forest regression model that aims to predict the membrane permeation rates of large, flexible macrocycles that lie outside of Rule of 5 chemical space.
+Biophysically meaningful chemical descriptors (features) are used in the RF regression tool, so as to model the thermodynamic entropy and enthalpy contributions to the free energy of membrane permeation.
 
 The model uses Python to implement a random forest regression model using chemical descriptors calculated using Dragon, and Maestro (the Schrödinger drug design software suite).
 
