@@ -120,7 +120,7 @@ def initiate():
     #dfSel = importanceFeaturesv02(df, labels)
 
     # our final combination of features.
-    dfSel = df[['ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w',]]
+    dfSel = df[['ALOGP', 'PSA_w', 'T(N..O)', 'nHDon', 'T(N..N)' , 'Es_w', 'piPC02']]
 
     #print(dfSel)
     #dfSel = df

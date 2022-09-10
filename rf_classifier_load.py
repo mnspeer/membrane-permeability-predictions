@@ -60,10 +60,12 @@ def RandomForestPredictor(df, cols):
     df_cpy = df.copy()
 
     regr = load(fmodel)
+    # if ln_Pe not included.
     if len(cols) == 8:
         df.drop(columns=cols[0], axis=1, inplace=True)
+    # if ln_Pe is included.
     else:
-        df.drop(columns=[cols[0],cols[10]], axis=1, inplace=True)
+        df.drop(columns=[cols[0],cols[7]], axis=1, inplace=True)
     testPred = regr.predict(df)
 
     

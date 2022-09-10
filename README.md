@@ -57,12 +57,9 @@ Ensure that the following fields are present in your data files:
 3. T(N..O) = sum of topological distances between N and O (from SMILES)
 4. nHDon = number of hyrogen bond doners (from SMILES)
 5. T(N..N) = sum of topological distances between N and N (from SMILES)
-6. piPC10 = multiple molecular path count of order 10 (from SMILES)
-7. piPC04 = multiple molecular path count of order 4 (from SMILES)
-8. piPC02 = multiple molecular path count of order 2 (from SMILES)
-9. MAXDN = maximum electrotopological negative variation (from SMILES)
-10. PSA_w = polar surface area in water (Angtroms^2) (from 3D modelling)
-11. Es_w = solvation energy in water (kCal mol^-1) (from 3D modelling)
+6. piPC02 = multiple molecular path count of order 2 (from SMILES)
+7. PSA_w = polar surface area in water (Angtroms^2) (from 3D modelling)
+8. Es_w = solvation energy in water (kCal mol^-1) (from 3D modelling)
 
 If any field has a different name in your input file than defined above, this can be adjusted following the prompts in the code.
 
@@ -76,7 +73,7 @@ Syntax:
 python rf_classifier_load.py *datafile* *modelfile*
 ~~~
 
-To use our pre-trained model (Set1_Set2_Set3_trained_model_3D_nHDon_new.joblib, which is trained on Set1 + Set2 + Set3) only the raw data file is required as a command line argument.
+To use our pre-trained model (trained_model_7features.joblib, which is trained on Set1 + Set2 + Set3) only the raw data file is required as a command line argument.
 
 Example:
 
@@ -88,7 +85,7 @@ To use your own pre-trained model, provide the saved model file as a second comm
 
 
 ### Training the model on a new dataset
-Instead of using our pre-trained model, a new model can be trained from scratch using any dataset that contains the ten defined model parameters.
+Instead of using our pre-trained model, a new model can be trained from scratch using any dataset that contains the seven defined model parameters.
 
 
 
