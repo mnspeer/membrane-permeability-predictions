@@ -30,7 +30,7 @@ def initiateFeatures():
     #df.drop(columns="MLOGP", axis=1, inplace=True)
     #df = df[['MLOGP', 'T(N..O)','T(N..N)','piPC10', 'piPC04','piPC02', 'nHDon','PSA_w','Es_w', '|dEs|']]
 
-    # to get the feature importance ranking when only using the features we chose (for Figure 3 in Paper).
+    # to get the feature importance ranking when only using the initally chosen 10 features (for Table 3 in the Paper).
     df = df[['ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w']]
 
     #df.to_csv("Set1_Set2_Set3_var4.csv")

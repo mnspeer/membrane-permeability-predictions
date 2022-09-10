@@ -53,7 +53,7 @@ def initiate():
     # , 'MSD', 'UNIP'
     #dfSel = df[['ALOGP', 'T(N..O)','TPSA(Tot)', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN']]
     #dfSel = importanceFeaturesv02(df, labels)
-    dfSel = df[['ALOGP', 'T(N..O)','nHDon', 'T(N..N)', 'piPC10', 'piPC04', 'piPC02', 'MAXDN', 'PSA_w','Es_w',]]
+    dfSel = df[['ALOGP', 'PSA_w', 'T(N..O)', 'nHDon', 'T(N..N)' , 'Es_w', 'piPC02']]
     
     #scaler = StandardScaler()
     #scaler = MinMaxScaler()
