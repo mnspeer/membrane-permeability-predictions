@@ -20,9 +20,9 @@ The model uses Python to implement a random forest regression model using chemic
 ## Files
 
 * Set1_Set2_Set3_SMILE_3D.csv - Input data for compounds in Sets 1-3 calculated using Dragon and Maestro.
-* Set1_Set2_Set3_trained_model_3D_nHDon_new.joblib - Saved model calculated using Sets 1-3.
-* rf_classifier_load.py - Python program to calculate permeabilities of peptides using random forest models.
-* save_trained_model.py - Python program to XXXX
+* trained_model_7features.joblib - Saved model calculated using Sets 1-3.
+* rf_classifier_load.py - Python program to calculate permeabilities of peptides using our pre-trained random forest models.
+* save_trained_model.py - Python program to train a custom random forest model that can then be used with *rf_classified_load.py*
 
 ## Technologies
 This project was created with:
@@ -34,7 +34,7 @@ This project was created with:
 
 ## Installation
 
-Download our code from Gituhub put it in a convenient location.
+Download our code from Gituhub and put it in a convenient location.
 
 The code requires Python 3 - you may need the *python3* command to execute this.
 
