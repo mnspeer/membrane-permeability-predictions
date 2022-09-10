@@ -60,7 +60,7 @@ Ensure that the following fields are present in your data files:
 5. T(N..N) = sum of topological distances between N and N (from SMILES)
 6. piPC02 = multiple molecular path count of order 2 (from SMILES)
 7. PSA_w = polar surface area in water (Angtroms^2) (from 3D modelling)
-8. Es_w = solvation energy in water (kCal mol^-1) (from 3D modelling)
+8. Es_w = solvation energy in water (kJ mol^-1) (from 3D modelling)
 
 If any field has a different name in your input file than defined above, this can be adjusted following the prompts in the code.
 
